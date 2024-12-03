@@ -1,4 +1,4 @@
-@import './base.css';
+@import './base2.css';
 
 #app {
   display: flex;
@@ -11,6 +11,7 @@
 
   overflow: visible;
   background-color: hsla(160, 100%, 37%, 1);
+
 }
 body {
   /*Removes that shitty auto marin*/

@@ -1,0 +1,11 @@
+:root {
+    --very-dark: #686868;
+
+    --quarter-percent: 25%;
+    --quarter-above-percent: 125%;
+    --hundred-fity-percent: 150%;
+    --hundred-seventy-five-percent: 175%;
+    --two-hundred-percent: 200%;
+
+    --border-width-small: 2px;
+}

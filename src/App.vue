@@ -17,6 +17,10 @@ import ContentViewer from './components/ContentViewer.vue'
 <style scoped>
 header {
 
+
+}
+main {
+
 }
 </style>
 
