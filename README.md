@@ -27,3 +27,16 @@ npm run dev
 ```sh
 npm run build
 ```
+
+TODO:
+Uzdevums: "Interaktīvās lietotnes izstrāde ar Vue.js 3"
+
+Uzdevuma apraksts:
+Studentiem jāizstrādā tīmekļa lietotne, kas palīdz lietotājiem pārvaldīt personīgo uzdevumu sarakstu (To-Do List).
+Projektam ir jāietver šādas funkcionalitātes:
+
+- Lietotāja iespēja pievienot, rediģēt un dzēst uzdevumus.
+- Uzdevumu kategorizācija (piem., "Personīgais", "Darbs", "Studijas").
+- Uzdevumu filtrēšana un meklēšana pēc statusa, kategorijas vai nosaukuma.
+- Uzdevumu statusa pārslēgšana (piem., "Pabeigts", "Nepabeigts").
+- Datu saglabāšana lokāli, izmantojot localStorage vai Vuex.
