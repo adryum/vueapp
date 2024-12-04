@@ -1,30 +1,75 @@
 <script setup>
+import SideTaskbarCard from '../components/SideTaskbarCard.vue'
 
 </script>
 
 <template>
 <div class="wrapper">
   <div class="hotbar">
-
+    <input class="searchbar" placeholder="search...">
+    <button>smth.</button>
+    <button>filter by ...</button>
+    <button>Edit tasks</button>
+<!--    when edit tasks will be enabled, then remove card hover transform -->
+    <button>-></button>
   </div>
   <div class="taskbar">
-
+    <SideTaskbarCard title="title" time="23.23.3425"/>
+    <SideTaskbarCard title="title2" time="23.23.33`15"/>
+    <SideTaskbarCard title="213312b" time="23.23.123425"/>
+    <SideTaskbarCard title="title is bigger" time="23.23.3425"/>
+    <SideTaskbarCard title="title IS EVEN BIGGER THAN BEFORE" time="23.23.3425"/>
+    <SideTaskbarCard title="213312b" time="23.23.123425"/>
+    <SideTaskbarCard title="title is bigger" time="23.23.3425"/>
+    <SideTaskbarCard title="title IS EVEN BIGGER THAN BEFORE" time="23.23.3425"/>
   </div>
 </div>
 </template>
 
 <style scoped>
+
 .hotbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
   flex: 0.5;
-  border-radius: 10px 10px 0 0;
+
+  padding-left: 2px;
+  padding-right: 2px;
+  box-sizing: border-box;
+
+  border-radius: calc(var(--border-radius-small) - 3px) calc(var(--border-radius-small) - 3px) 0 0;
   background: #979797;
 }
+.hotbar button{
+  height: 100%;
+  min-width: 3em;
+  background: transparent;
+  border: none;
+}
+button:hover {
+  backdrop-filter: brightness(0.8);
+}
+.searchbar {
+  width: 100%;
+  height: 70%;
+  border-radius: 2px;
+  border: none;
+}
+
 .taskbar {
   flex: 10;
-  border-radius: 0 0 10px 10px;
-  background: #ffffd6;
 
+  display: grid;
+  grid-auto-rows: 9em;
+  grid-row-gap: 3px;
+  padding: 2px;
+
+  box-sizing: border-box;
+  overflow: scroll;
 }
+
 
 .wrapper{
   position: relative;
@@ -36,10 +81,20 @@
 
   padding: 2px;
   box-sizing: border-box;
-  border-radius: 12px;
+  border-radius: var(--border-radius-small);
 
   z-index: 0;
   background: #7a7a7a;
+}
+.wrapper::before{
+  content: '';
+  position: absolute;
+  border-radius: calc(var(--border-radius-small) - 2px);
+  height: calc(100% - var(--border-width-small) * 2);
+  width: calc(100% - var(--border-width-small) * 2);
+  filter: brightness(var(--hundred-seventy-five-percent));
+  background: var(--very-dark);
+  z-index: -1;
 }
 
 </style>
